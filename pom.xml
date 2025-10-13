@@ -14,6 +14,9 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<app.runtime>4.9.10</app.runtime>
+		<!-- credentials for Business Group /Home/Tutorials, Sandbox environment -->
+		<ap.client.id>6404a3980b4343df93460cfdfd6a3be4</ap.client.id>
+		<ap.client.secret>030494B07d3a4B348494e2d01b49A245</ap.client.secret>
 		<mule.maven.plugin.version>4.5.3</mule.maven.plugin.version>
 		<app.name>github-actions</app.name>
 		<env>Sandbox</env>
@@ -43,6 +46,7 @@
 						<environment>${env}</environment>
 						<vCores>0.1</vCores>
 						<target>Cloudhub-US-East-2</target>
+						<businessGroupId>fceac7ed-5523-4e87-8c46-8af73107eb22</businessGroupId>
 						<releaseChannel>LTS</releaseChannel>
 						<replicas>1</replicas>
 						<integrations>
@@ -52,6 +56,12 @@
 								</objectStoreV2>
 							</services>
 						</integrations>
+						<properties>
+							<anypoint.platform.client_id>${ap.client.id}</anypoint.platform.client_id>
+						</properties>
+						<secureProperties>
+							<anypoint.platform.client_secret>${ap.client.secret}</anypoint.platform.client_secret>
+						</secureProperties>
 						<skipDeploymentVerification>true</skipDeploymentVerification>
 					</cloudhub2Deployment>
 				</configuration>
