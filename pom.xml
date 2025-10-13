@@ -41,7 +41,6 @@
 				<extensions>true</extensions>
 				<!-- Deployment config start -->
 				<configuration>
-					<classifier>mule-application</classifier>
 					<cloudhub2Deployment>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<provider>MC</provider>
@@ -75,6 +74,7 @@
 						</secureProperties>
 						<skipDeploymentVerification>true</skipDeploymentVerification>
 					</cloudhub2Deployment>
+					<classifier>mule-application</classifier>
 				</configuration>
 				<!-- Deployment config end -->
 			</plugin>
@@ -86,31 +86,6 @@
 			<groupId>org.mule.connectors</groupId>
 			<artifactId>mule-http-connector</artifactId>
 			<version>1.10.6</version>
-			<classifier>mule-plugin</classifier>
-		</dependency>
-		<dependency>
-			<groupId>fceac7ed-5523-4e87-8c46-8af73107eb22</groupId>
-			<artifactId>github-actions</artifactId>
-			<version>1.0.0</version>
-			<classifier>http</classifier>
-			<type>zip</type>
-		</dependency>
-		<dependency>
-			<groupId>org.mule.modules</groupId>
-			<artifactId>mule-apikit-module</artifactId>
-			<version>1.11.7</version>
-			<classifier>mule-plugin</classifier>
-		</dependency>
-		<dependency>
-			<groupId>org.mule.connectors</groupId>
-			<artifactId>mule-objectstore-connector</artifactId>
-			<version>1.2.4</version>
-			<classifier>mule-plugin</classifier>
-		</dependency>
-		<dependency>
-			<groupId>org.mule.connectors</groupId>
-			<artifactId>mule-sockets-connector</artifactId>
-			<version>1.2.7</version>
 			<classifier>mule-plugin</classifier>
 		</dependency>
 	</dependencies>
