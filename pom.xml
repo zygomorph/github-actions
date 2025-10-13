@@ -36,6 +36,7 @@
 				<extensions>true</extensions>
 				<!-- Deployment config start -->
 				<configuration>
+					<classifier>mule-application</classifier>
 					<cloudhub2Deployment>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<provider>MC</provider>
