@@ -12,12 +12,17 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
 		<app.runtime>4.9.10</app.runtime>
+
+		<!-- credentials for connected app -->
+		<client.id>b726956cbb654c35a47eb09d97513cb6</client.id>
+		<client.secret>AE97B00DCDe241FAb1C71817A9ff91ac</client.secret>
+
 		<!-- credentials for Business Group /Home/Tutorials, Sandbox environment -->
 		<ap.client.id>6404a3980b4343df93460cfdfd6a3be4</ap.client.id>
 		<ap.client.secret>030494B07d3a4B348494e2d01b49A245</ap.client.secret>
-		<mule.maven.plugin.version>4.5.3</mule.maven.plugin.version>
+		
+		<mule.maven.plugin.version>4.6.0</mule.maven.plugin.version>
 		<app.name>github-actions</app.name>
 		<env>Sandbox</env>
 	</properties>
@@ -40,9 +45,14 @@
 					<cloudhub2Deployment>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<provider>MC</provider>
+						<connectedAppClientId>${client.id}</connectedAppClientId>
+						<connectedAppClientSecret>${client.secret}</connectedAppClientSecret>
+						<connectedAppGrantType>client_credentials</connectedAppGrantType>
 						<muleVersion>${app.runtime}</muleVersion>
+						<!--  
 						<username>${anypoint.username}</username>
 						<password>${anypoint.password}</password>
+						-->
 						<applicationName>${app.name}</applicationName>
 						<environment>${env}</environment>
 						<vCores>0.1</vCores>
