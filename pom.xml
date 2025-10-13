@@ -15,6 +15,8 @@
 
 		<app.runtime>4.9.10</app.runtime>
 		<mule.maven.plugin.version>4.5.3</mule.maven.plugin.version>
+		<app.name>github-actions</app.name>
+		<env>Sandbox</env>
 	</properties>
 
 	<build>
@@ -29,6 +31,31 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
+				<!-- Deployment config start -->
+				<configuration>
+					<cloudhub2Deployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<provider>MC</provider>
+						<muleVersion>${app.runtime}</muleVersion>
+						<username>${anypoint.username}</username>
+						<password>${anypoint.password}</password>
+						<applicationName>${app.name}</applicationName>
+						<environment>${env}</environment>
+						<vCores>0.1</vCores>
+						<target>Cloudhub-US-East-2</target>
+						<releaseChannel>LTS</releaseChannel>
+						<replicas>1</replicas>
+						<integrations>
+							<services>
+								<objectStoreV2>
+									<enabled>true</enabled>
+								</objectStoreV2>
+							</services>
+						</integrations>
+						<skipDeploymentVerification>true</skipDeploymentVerification>
+					</cloudhub2Deployment>
+				</configuration>
+				<!-- Deployment config end -->
 			</plugin>
 		</plugins>
 	</build>
