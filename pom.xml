@@ -21,7 +21,6 @@
 		<!-- credentials for Business Group /Home/Tutorials, Sandbox environment -->
 		<ap.client.id>6404a3980b4343df93460cfdfd6a3be4</ap.client.id>
 		<ap.client.secret>030494B07d3a4B348494e2d01b49A245</ap.client.secret>
-		
 		<mule.maven.plugin.version>4.6.0</mule.maven.plugin.version>
 		<app.name>github-actions</app.name>
 		<env>Sandbox</env>
@@ -74,7 +73,7 @@
 						</secureProperties>
 						<skipDeploymentVerification>true</skipDeploymentVerification>
 					</cloudhub2Deployment>
-					<classifier>mule-application</classifier>
+					<classifier>---- select project type ----</classifier>
 				</configuration>
 				<!-- Deployment config end -->
 			</plugin>

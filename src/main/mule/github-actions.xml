@@ -13,5 +13,6 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 		<http:listener doc:name="Listener" doc:id="ebe18e08-73f2-42ff-b38e-0900d3cd5d01" config-ref="HTTP_Listener_config" path="/test"/>
 		<set-payload value='#["It worked!"]' doc:name="Set Payload" doc:id="d8909e82-d6b0-4809-9d5f-2c567b2b9448" />
 		<logger level="INFO" doc:name="Logger" doc:id="5df530fa-5b83-4d9a-85f0-564026d5a8e4" message='#[payload]' />
+		<error-handler ref="github-actions-error-handler"/>
 	</flow>
 </mule>
